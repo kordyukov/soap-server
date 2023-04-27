@@ -1,0 +1,4 @@
+server-rest-soap:
+  rest-uri-address: http://localhost:5000/Hello
+  soap-uri-address: http://localhost:8081/HelloServerPort
+

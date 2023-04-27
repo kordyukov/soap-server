@@ -30,6 +30,10 @@ dependencies {
     implementation 'org.apache.cxf:cxf-rt-frontend-simple:4.0.0'
     testImplementation 'org.apache.cxf:cxf-rt-features-logging:4.0.0'
     implementation 'org.apache.cxf:cxf-rt-transports-http:4.0.0'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+    implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.1.0'
+    implementation 'org.apache.cxf:cxf-rt-frontend-jaxws:4.0.0'
 }
 
 tasks.named('test') {
