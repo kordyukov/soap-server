@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.6'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.0.6'
+    implementation 'org.apache.cxf:cxf-rt-transports-http-jetty:4.0.0'
+    implementation 'org.apache.cxf:cxf-rt-frontend-jaxws:4.0.0'
+    implementation 'org.apache.cxf:cxf-rt-frontend-simple:4.0.0'
+    testImplementation 'org.apache.cxf:cxf-rt-features-logging:4.0.0'
+    implementation 'org.apache.cxf:cxf-rt-transports-http:4.0.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
